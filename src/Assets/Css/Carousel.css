@@ -1,0 +1,14 @@
+.carousel{
+    margin-top: 10px;
+}
+
+.carousel-img{
+    width: 100%;
+
+}
+
+@media (max-width: 600px) {
+    .carousel-overview{
+        display: none;
+    }
+  }

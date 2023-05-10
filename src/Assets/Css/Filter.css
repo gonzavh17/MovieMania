@@ -1,0 +1,70 @@
+.form-container {
+  justify-content: center;
+  margin: 60px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../Img/her.jpg");
+  background-size: cover;
+  color: #fefbf6;
+  padding: 60px;
+  border-radius: 50px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form-input {
+  background-color: #fefbf6;
+  border: none;
+  padding: 10px;
+  border-radius: 90px;
+  width: 90%;
+  color: #000;
+}
+
+.form-search-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.form-title {
+  display: block;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 22ch;
+  font-size: 25px;
+  animation: typing 2s steps(22), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .form-container{
+   margin: 30px 10px;
+    padding: 30px;
+    background-position: center;
+  }
+
+  .form-title{
+    font-size: 18px;
+    white-space: pre;
+    width: 18ch;
+  }
+}

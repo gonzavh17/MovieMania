@@ -1,0 +1,51 @@
+.nav-bar-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0A2647;
+}
+
+.nav-bar-brand-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-mania{
+    color: #FEFBF6;
+    font-size: 35px;
+    margin: 0;
+}
+
+.nav-bar-icon{
+    color: #FEFBF6;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+
+
+/* .form-container{
+    display: flex;
+    align-items: center;
+}
+
+.input{
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #FEFBF6;
+}
+
+.search-btn{
+    background-color:transparent;
+    color: #FEFBF6;
+    font-size: 16px;
+    padding: 7px;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+} */
