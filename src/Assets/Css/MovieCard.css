@@ -21,6 +21,12 @@
   color: aliceblue;
 }
 
+.spinner-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .img {
   height: 600px;
   max-width: 400px;

@@ -16,7 +16,7 @@ function MovieDetailContainer() {
 
   /* variables de estado */
   const [movies, setMovies] = useState([]);
-  const [searchKey, setSerchKey] = useState("");
+  const [searchKey, setsearchKey] = useState("");
   const [trailer, setTrailer] = useState(null);
   const [movie, setMovie] = useState({ title: "loading movies" });
   const [playing, setPlaying] = useState(false);

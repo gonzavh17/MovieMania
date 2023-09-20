@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import SimpleSlider from "../Components/SimpleSlIder"
 
-function Filter({ searchMovies, setSerchKey }) {
+function Filter({ searchMovies, setsearchKey }) {
   return (
     <div className="form-container">
 
@@ -16,9 +16,9 @@ function Filter({ searchMovies, setSerchKey }) {
       <form action="" onSubmit={searchMovies} className="form">
         <input
           type="text"
-          placeholder="serch"
+          placeholder="Search"
           className="form-input"
-          onChange={(e) => setSerchKey(e.target.value)}
+          onChange={(e) => setsearchKey(e.target.value)}
         />
         <button className="form-search-btn">
           <FontAwesomeIcon icon={faMagnifyingGlass} />

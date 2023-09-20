@@ -5,6 +5,7 @@ import Filter from "../Components/Filter";
 import "../Assets/Css/MovieCard.css";
 import "../Components/Carousel";
 import Carousel from "../Components/Carousel";
+import Spinner from "../Components/Spinner";
 
 function MovieList() {
   const apiUrl = "https://api.themoviedb.org/3";
@@ -14,25 +15,32 @@ function MovieList() {
 
   /* variables de estado */
   const [movies, setMovies] = useState([]);
-  const [searchKey, setSerchKey] = useState("");
-  const [trailer, setTrailer] = useState(null);
+  const [searchKey, setsearchKey] = useState("");
+  const [loading, setLoading] = useState(true); // Estado para controlar la carga
   const [movie, setMovie] = useState({ title: "loading movies" });
   const [playing, setPlaying] = useState(false);
 
-  /* llamado a la api */
-  const fetchMovies = async (serchKey) => {
-    const type = searchKey ? "search" : "discover";
-    const {
-      data: { results },
-    } = await axios.get(`${apiUrl}/${type}/movie`, {
-      params: {
-        api_key: apiKey,
-        query: searchKey,
-      },
-    });
+  /* Llamado a la API */
+  const fetchMovies = async (searchKey) => {
+    setLoading(true); // Indica que la carga está en curso
+    try {
+      const type = searchKey ? "search" : "discover";
+      const {
+        data: { results },
+      } = await axios.get(`${apiUrl}/${type}/movie`, {
+        params: {
+          api_key: apiKey,
+          query: searchKey,
+        },
+      });
 
-    setMovies(results);
-    setMovie(results[0]);
+      setMovies(results);
+      setMovie(results[0]);
+    } catch (error) {
+      console.error('Error al cargar datos:', error);
+    } finally {
+      setLoading(false); // Indica que la carga ha terminado
+    }
   };
 
   useEffect(() => {
@@ -46,23 +54,31 @@ function MovieList() {
 
   const firstThreeMovies = movies.slice(0, 3);
 
-  console.log(firstThreeMovies);
-
   return (
     <div className="container">
       <div className="movie-filter-none">
-        <Filter searchMovies={searchMovies} setSerchKey={setSerchKey} />
+        <Filter searchMovies={searchMovies} setsearchKey={setsearchKey} />
       </div>
 
-      <div className="carousel">
-        <Carousel movies={firstThreeMovies} />
-      </div>
+      
+      {loading ? ( // Si está cargando, muestra el spinner
+        <div className="spinner-container">
+        <Spinner/>
+        </div>
+  
+      ) : (
+        <div>
+          <div className="carousel">
+            <Carousel movies={firstThreeMovies} />
+          </div>
 
-      <div className="movie-card">
-        {movies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
-        ))}
-      </div>
+          <div className="movie-card">
+            {movies.map((movie) => (
+              <MovieCard key={movie.id} movie={movie} />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

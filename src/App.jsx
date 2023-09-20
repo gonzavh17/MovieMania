@@ -3,8 +3,8 @@ import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar";
 import MovieDetailContainer from "./Containers/MovieDetailContainer";
 import MovieList from "./Containers/MovieList";
-import ComponentePrueba from  '../src/Components/ComponentePrueba'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import ComponentePrueba from "../src/Components/ComponentePrueba";
+import "bootstrap/dist/css/bootstrap.min.css";
 import {
   BrowserRouter as Router,
   Routes,
@@ -19,13 +19,12 @@ function App() {
       <NavBar />
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<MovieList />}/>
-        <Route path="/movie/:id" element={<MovieDetailContainer/>}/>
-        <Route path="/1" element={<ComponentePrueba/>}/>
+          <Route path="/" element={<MovieList />} />
+          <Route path="/movie/:id" element={<MovieDetailContainer />} />
+          <Route path="/1" element={<ComponentePrueba />} />
         </Routes>
-        
       </BrowserRouter>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

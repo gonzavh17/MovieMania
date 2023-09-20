@@ -36,8 +36,9 @@
   display: block;
   white-space: nowrap;
   border-right: 4px solid;
-  width: 22ch;
-  font-size: 25px;
+  white-space: nowrap;
+  width: 19ch;
+  font-size: 30px;
   animation: typing 2s steps(22), blink 0.5s infinite step-end alternate;
   overflow: hidden;
 }

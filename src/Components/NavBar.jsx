@@ -10,7 +10,7 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 
-function NavBar({ searchMovies, setSerchKey }) {
+function NavBar({ searchMovies, setsearchKey }) {
   return (
     <div className="nav-bar-container">
       <div className="nav-bar-brand-container">
