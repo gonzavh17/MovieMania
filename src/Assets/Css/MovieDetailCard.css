@@ -37,13 +37,19 @@
 .movie-detail-parent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 25% 1fr;
+  grid-template-rows: 20% 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   margin: 100px;
 }
 
 /* grid 1 */
+
+.realese-date{
+  font-size: 25px;
+  padding-bottom: 5px;
+  margin: 0;
+}
 
 .detail-img {
   height: 600px;
@@ -109,6 +115,7 @@
 /* Overview */
 .detail-overview {
   margin: 20px 100px;
+  font-size: 20px;
 }
 
 .detail-genre-container {
@@ -194,7 +201,15 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
+  .realese-date{
+    text-align: center;
+  }
+
+  .detail-original-title{
+    text-align:center;
+  }
+
   .movie-detail-parent{
     display: flex;
     align-items: center;
@@ -203,6 +218,9 @@
 
   .detail-text{
     padding: 0 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .reproductor-container{
@@ -226,6 +244,9 @@
 }
 
 @media (max-width: 600px) {
+  .detail-overview{
+    font-size: 18px;
+  }
 
   .detail-img{
     height: 320px;

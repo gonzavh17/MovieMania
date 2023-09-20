@@ -26,7 +26,12 @@
     font-size: 25px;
 }
 
+@media (max-width: 600px) {
 
+  .movie-mania{
+    font-size: 1rem;
+  }
+  }
 
 /* .form-container{
     display: flex;

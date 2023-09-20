@@ -10,6 +10,10 @@
   border-radius: 50px;
 }
 
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  padding: 0 !important;
+}
+
 .form {
   display: flex;
   flex-direction: row;
@@ -37,7 +41,7 @@
   white-space: nowrap;
   border-right: 4px solid;
   white-space: nowrap;
-  width: 19ch;
+  width: 21ch;
   font-size: 30px;
   animation: typing 2s steps(22), blink 0.5s infinite step-end alternate;
   overflow: hidden;
@@ -59,13 +63,12 @@
 
   .form-container{
    margin: 30px 10px;
-    padding: 30px;
+
     background-position: center;
   }
 
   .form-title{
-    font-size: 18px;
+    font-size: 16px;
     white-space: pre;
-    width: 18ch;
   }
 }

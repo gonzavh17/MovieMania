@@ -32,7 +32,7 @@ function MovieDetailCard({ movie, trailer }) {
 
       <div className="movie-detail-parent">
         <div className="child-1">
-          <p className="">Realese Date: {movie.release_date && movie.release_date.split("-")[0]}</p>
+          <p className="realese-date">Realese Date: {movie.release_date && movie.release_date.split("-")[0]}</p>
           <p className="detail-original-title">
             Original Title: {movie.original_title}
           </p>

@@ -18,7 +18,10 @@ function NavBar({ searchMovies, setsearchKey }) {
         <span className="nav-bar-icon">
           <FontAwesomeIcon icon={faFilm} />
         </span>
+        
         <p className="movie-mania">Movie Mania</p>
+     
+    
       </div>
 
     </div>
